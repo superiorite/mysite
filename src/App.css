@@ -3,14 +3,17 @@
   flex-direction: row;
   flex-wrap: nowrap;
   float: right;
-  position: relative;
+  position: fixed;
   margin: auto;
+  width: 100%;
+
 }
 
 .ccd {
     overflow: hidden;
     position: relative;
     display: inline-block;
+    width: 20%;
 }
  
 a.ddott {
@@ -25,7 +28,7 @@ a.ddott {
     font-weight: bold;
     text-shadow: 0 100px 0 #FFF,1px 76px 10px #000;
     color: #000;
-    background: #C3FEFB;
+    background: #FFF;
     border-right: 2px solid #FFF;
     border-left: 2px solid #FFF;
     -webkit-transition: all 0.3s ease-in-out;
@@ -33,7 +36,7 @@ a.ddott {
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    padding-right: 300px;
+    padding-right: 311px;
 }
 a.ddott:hover {
     text-shadow: 0 50px 0 #FFF, 1px 51px 20px #FFF;

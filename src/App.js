@@ -16,7 +16,6 @@ class App extends React.Component {
     return (
       <div className="main">
         <Menu />
-        <Logo />
         <Quote />
       </div>
     );
@@ -32,6 +31,9 @@ class Menu extends React.Component {
           <div>
             <nav>
               <div className="ccd">
+                <Link to="/" className="ddott">Главная</Link>
+              </div>
+              <div className="ccd">
                 <Link to="/projects" className="ddott">Проекты</Link>
               </div>
               <div className="ccd">
@@ -46,6 +48,9 @@ class Menu extends React.Component {
             </nav>
 
             <Switch>
+              <Route path="/">
+                <Home />
+              </Route>
               <Route path="/projects">
                 <Projects />
               </Route>
@@ -64,6 +69,10 @@ class Menu extends React.Component {
       </div>
     );
   }
+}
+
+function Home() {
+  return <h2></h2>
 }
 
 function Projects() {
@@ -91,9 +100,5 @@ const Quote = props => {
   );
 }
 
-
-const Logo = props => {
-  return <img src="./superiorite.png"/>
-}
 
 export default App;
