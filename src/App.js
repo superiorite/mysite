@@ -75,28 +75,16 @@ class Menu extends React.Component {
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.showDescription = this.showDescription.bind(this)
-    this.hideDescription = this.hideDescription.bind(this)
-    this.state = {description: ''}
-  }
-  showDescription(event) {
-    this.setState({text: 'Это главная страница. Скоро будет добавлено детальное описание данного проекта'});
-  }
-  hideDescription(event) {
-    this.setState({text: ''});
   }
   render() {
     return (
-      <div>
-        <Button variant="contained" color="primary"
-          onClick={this.showDescription}>
-          Описание
-        </Button>
-        <Button variant="contained" color="secondary"
-          onClick={this.hideDescription}>
-          Скрыть
-        </Button>
-        <h2>{this.state.text}</h2>
+      <div id="main">
+        <div id="main-quote">
+        <span id="quote-text">Идеи<br/> появляются<br/> и исчезают,<br/>
+          а истории <br/>остаются.</span>
+        </div>
+        <div id="description">Это мой первый и не последний, <br/>я надеюсь 
+          учебный проект, <br/> где я тренирую навыки написания <br/> SPA-приложений с помощью React.</div>
       </div>
     );
   }

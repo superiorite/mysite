@@ -1,3 +1,8 @@
+body {
+    background: #A9A9A9;
+    font-family: "Vibur", cursive;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -26,7 +31,7 @@ a.ddott {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    text-shadow: 0 100px 0 #FFF,1px 76px 10px #000;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     color: #000;
     background: #FFF;
     border-right: 2px solid #FFF;
@@ -42,12 +47,31 @@ a.ddott:hover {
     text-shadow: 0 50px 0 #FFF, 1px 51px 20px #FFF;
     margin-top: -50px;
     height: 100px;
-    background: #222;
+    background: #A9A9A9;
 }
 
-body {
-    background-image: url(img/background.jpg);
-    background-size: cover;
-    background-position: top-center;
-    background-repeat: no-repeat;
-}   
+#quote-text {
+    text-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+    font-size: 120px;
+    line-height: 0.9em;
+}
+
+#main-quote {
+    display: flex;
+    position: fixed;
+    float: left;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 30px;
+    width: 40%;
+
+}
+
+#description {
+    position: relative;
+    float: right;
+    border: 5px solid black;
+    padding: 30px;
+    font-size: 52px;
+    margin: 30px;
+}
