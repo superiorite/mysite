@@ -75,3 +75,16 @@ a.ddott:hover {
     font-size: 52px;
     margin: 30px;
 }
+
+.btns-like {
+    margin: 50px;
+}
+
+#btns-like {
+    position: absolute;
+    overflow: auto;
+    display: block;
+    top: 500px;
+    left: 900px;
+
+}

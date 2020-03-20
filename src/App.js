@@ -6,7 +6,8 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import { Button } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+
 
 
 class App extends React.Component {
@@ -72,9 +73,23 @@ class Menu extends React.Component {
   }
 }
 
+
+
+
 class Home extends React.Component {
   constructor(props) {
     super(props)
+    this.handleClickLike = this.handleClickLike.bind(this)
+    this.handleClickDis = this.handleClickDis.bind(this)
+    this.state = {
+      liked: "",
+    }
+  }
+  handleClickLike() {
+    this.setState({liked: "yes"})
+  }
+  handleClickDis() {
+    this.setState({liked: "no"})
   }
   render() {
     return (
@@ -85,6 +100,26 @@ class Home extends React.Component {
         </div>
         <div id="description">Это мой первый и не последний, <br/>я надеюсь 
           учебный проект, <br/> где я тренирую навыки написания <br/> SPA-приложений с помощью React.</div>
+        <div id="btns-like">
+          <span class="btns-like">
+            <Button 
+              variant="contained"
+              color={this.state.liked === "yes" ? "primary" : ""}
+              onClick={this.handleClickLike}
+              size="large">
+                Нравится
+            </Button>
+          </span>
+          <span class="btns-like">
+            <Button 
+              variant="contained"
+              color={this.state.liked === "no" ? "secondary" : ""}
+              onClick={this.handleClickDis}
+              size="large">
+                Не нравится
+            </Button>
+          </span>
+        </div>
       </div>
     );
   }
