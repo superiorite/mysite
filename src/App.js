@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Calculator from './temperature-calc'
 import {
   BrowserRouter as Router,
   Switch,
@@ -127,11 +128,11 @@ class Home extends React.Component {
 }
 
 function Projects() {
-  return <h2>Проекты</h2>;
+  return <h2><NameForm /></h2>;
 }
 
 function About() {
-  return <h2>Обо мне</h2>;
+  return <h2><Calculator /></h2>;
 }
 
 function Blog() {
@@ -174,6 +175,38 @@ class Clock extends React.Component {
       <div>
         <h4> Now {this.state.date.toLocaleString()}.</h4>
       </div>
+    );
+  }
+}
+
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('Отправленное имя: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Имя:
+          <input type="text" value={this.state.value}
+            onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Отправить"/>
+      </form>
     );
   }
 }
